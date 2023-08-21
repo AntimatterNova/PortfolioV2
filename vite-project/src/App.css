@@ -4,12 +4,35 @@
   padding: 2rem;
   text-align: center;
   --mainCol: #3a9898;
+  --shadow: #2a7272;
   --secondary: #1e0b0b;
   --accent: #43b1b1;
 }
 
+body {
+  background-image: url(./images/page-bg.png);
+  background-size: cover;
+}
+
 .is-rounded {
   border-radius: 10px;
+}
+
+.has-bottom-line {
+  margin: 5px;
+  border-width: 0px;
+  border-bottom-width: 5px;
+  border-style: solid;
+  border-color: var(--secondary);
+}
+
+.has-main-shadow {
+  margin: 5px;
+  border-width: 0px;
+  border-right-width: 2px;
+  border-bottom-width: 3px;
+  border-style: solid;
+  border-color: var(--shadow);
 }
 
 .has-background-main {
@@ -24,8 +47,48 @@
   background-color: var(--accent);
 }
 
+.has-background-shadow {
+  background-color: var(--shadow);
+}
+
 .has-background-brand {
-  background-image: url(./images/brand.png);
+  background-image: url(./images/header.png);
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
+}
+
+.has-background-clear {
+  background-color: transparent;
+}
+
+.has-background-tq {
+  background-image: url(./images/SiteScreenshot.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.has-background-nq {
+  background-image: url(./images/NerdQuiz.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.has-background-dn {
+  background-image: url(./images/11-express-homework-demo-01.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.has-text-main {
+  color: var(--mainCol);
+  text-decoration:double;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+}
+
+.has-border-secondary {
+  border-color: var(--secondary);
 }

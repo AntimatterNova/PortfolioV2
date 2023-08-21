@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
@@ -5,40 +6,42 @@ import { Link, useLocation } from 'react-router-dom';
 function Navbar() {
   const currentPage = useLocation().pathname;
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className="navbar is-rounded has-background-main m-1" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand has-background-brand">
+    <nav className="navbar is-rounded has-background-brand m-1" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <h1 className="title has-text-white m-1">Darien Valet</h1>
         </div>
         
-        <div className={`navbar-menu has-background-accent ${menuOpen ? 'is-active' : ''}`}>
+        <div className={`navbar-menu has-background-clear ${menuOpen ? 'is-active' : ''}`}>
             <div className="navbar-start">
-                <link
-                  to="/About" 
-                  className={`navbar-item ${currentPage === '/About' ? 'nav-link active' : 'nav-link'}`}
+                <a
+                  href="/" 
+                  className={`navbar-item has-background-main has-text-white has-main-shadow is-rounded ${currentPage === '/About' ? 'nav-link active' : 'nav-link'}`}
                 >
                   About Me
-                </link>
-                <link
-                  to="/Portfolio"
-                  className={`navbar-item ${currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}`}
+                </a>
+                <a
+                  href="/portfolio"
+                  className={`navbar-item has-background-main has-text-white has-main-shadow is-rounded ${currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}`}
                 >
                   Portfolio
-                </link>
-                <link
-                  to="/Contact"
-                  className={`navbar-item ${currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}`}
+                </a>
+                <a
+                  href="/contact"
+                  className={`navbar-item has-background-main has-text-white has-main-shadow is-rounded ${currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}`}
                 >
                   Contact
-                </link>
-                <link
-                className={`navbar-item ${currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}`}
-                >
-                  Resume
-                </link>
+                </a>
             </div>
         </div>
         
-        <div className={`navbar-burger ${menuOpen ? 'is-active' : ''}`} onClick={toggleMenu}>
+        <div className={`navbar-burger has-text-white has-background-accent is-rounded ${menuOpen ? 'is-active' : ''}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
@@ -47,4 +50,4 @@ function Navbar() {
   );
 }
 
-export default NavTabs;
+export default Navbar;
