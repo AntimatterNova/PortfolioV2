@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Home() {
+export default function Home() {
   return (
     <div class="portfolio">
       <header class="hero is-rounded has-background-secondary has-text-white m-1">
@@ -13,5 +11,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

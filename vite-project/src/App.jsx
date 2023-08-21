@@ -1,23 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './navbar';
-import Home from './Home';
-import About from './About';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
-import Resume from './Resume';
+// Bringing in the required import from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import Navbar from './pages/Navbar';
 
 function App() {
+	const [currentTab, setCurrentTab] = useState("about");
+
+	// This function checks to see which tab is selected and then generates the appropriate tab.
+	const renderTab = () => {
+		switch (currentTab) {
+			case "about":
+				return <About />;
+			case "portfolio":
+				return <Portfolio />;
+			case "contact":
+				return <Contact />;
+			case "resume":
+				return <Resume />;
+			default:
+				return null;
+		}
+	};
+  
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/resume" component={Resume} />
-      </Switch>
-    </Router>
+    <>
+      <Navbar />
+      <main className="">
+        <Outlet />
+      </main>
+    </>
   );
 }
 
