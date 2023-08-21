@@ -1,8 +1,30 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Darien's Portfolio
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Description.](#description)
+- [Usage Tips.](#usage)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a name='description'></a>
+## Product Description
+This is a portfolio site that I built. Feel free to take a look at it and leave some suggestions for improvements.
+
+<a name='usage'></a>
+## Usage
+N/A
+
+<a name='installation'></a>
+## Installation
+Clone the git repo.
+
+<a name='contributing'></a>
+## Contributing
+AntimatterNova
+
+<a name='license'></a>
+## License
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
